@@ -19,6 +19,12 @@ echo "Setup complete! Please restart your terminal to use Zsh with Oh My Zsh."
 # Specify the desired theme
 desired_theme="cloud"
 
+sudo snap refresh
+sudo snap install nvim
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 # Check if Oh My Zsh is installed
 if [ -d "$HOME/.oh-my-zsh" ]; then
     # Update the Zsh theme in the ~/.zshrc file
