@@ -20,7 +20,7 @@ echo "Setup complete! Please restart your terminal to use Zsh with Oh My Zsh."
 desired_theme="cloud"
 
 sudo snap refresh
-sudo snap install nvim
+sudo snap install --classic nvim
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
