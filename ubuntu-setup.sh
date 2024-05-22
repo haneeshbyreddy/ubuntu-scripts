@@ -7,8 +7,20 @@ sudo apt upgrade -y
 sudo snap refresh
 sudo snap install --classic nvim
 
-# Install Zsh
-sudo apt install zsh -y
+# Array of packages to be installed
+packages=(
+  "default-jdk"
+  "nodejs"
+  "npm"
+  "ranger"
+  "fzf"
+  "zsh"
+)
+
+for package in "${packages[@]}"; do
+  echo "Installing: $package"
+  sudo apt install $package -y
+done
 
 # Set Zsh as the default shell
 chsh -s $(which zsh)
